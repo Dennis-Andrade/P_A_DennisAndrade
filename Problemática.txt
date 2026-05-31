@@ -1,0 +1,21 @@
+1. Contexto de la Problemática
+Has sido contratado para desarrollar un nuevo módulo en el ecosistema ESPE-Tech. La institución requiere un sistema que gestione el inventario de equipos tecnológicos de los laboratorios. Basado en la estructura del proyecto ESPE-Plus, deberás implementar una solución que procese grandes volúmenes de datos de equipos para generar reportes analíticos de disponibilidad y valoración.
+
+2. Instrucciones Técnicas
+Deberás crear un nuevo proyecto Spring Boot siguiendo la arquitectura evidenciada en clases:
+
+Capa de Persistencia: Definir una entidad HardwareEntity con atributos como: id, modelo, categoria (Laptop, PC, Servidor), precio (BigDecimal), fechaCompra y estado (ACTIVO, DEBAJA).
+Capa de Negocio (Service): Implementar la lógica de procesamiento algorítmico solicitado.
+Capa Web (Controller): Exponer los resultados mediante un endpoint REST.
+Capa AI: Integrar AiService para generar un mensaje dinámico de "Resumen de Inventario" (similar a ESPEPlusAIService).
+El Problema Algorítmico:
+Dado un conjunto de 10,000 registros de hardware, el sistema debe:
+Filtrar solo equipos comprados en los últimos 5 años y que estén en estado 'ACTIVO'.
+Agrupar los equipos por categoría.
+Calcular el valor total y el promedio de precio por cada categoría.
+Retornar el equipo más caro de cada categoría.
+3. Desarrollo de la Tarea
+El estudiante debe implementar el problema algorítmico anterior mediante dos enfoques distintos dentro del mismo servicio:
+
+Paradigma Imperativo: Uso estricto de estructuras de control tradicionales (for, if, else, acumuladores manuales).
+Paradigma Funcional/Declarativo: Uso de Java Streams API, Optional y Collectors.
